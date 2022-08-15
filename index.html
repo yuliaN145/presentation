@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>OWASP TOP 10</h1>
+					<p>by YuliaN145</p>
+				</section>
+				<section>
+					<section><h2>What is OWASP?</h2></section>
+					<section>
+						Open Web Application Security Project (OWASP) is a non-profit 
+						organization that aims to improve software security. It is a one-stop 
+						shop for individuals, enterprises, government agencies, and other 
+						global organizations seeking failure and real-world knowledge regarding 
+						application security.
+					</section>
+					<section class="flex-dos" style="top: 24.5px; display: flex;">
+						<img src="./Otlichie-DOS-ot-DDOS-ataki-obl1.png" alt="">
+						<p>
+							With cybercrime on the rise, distributed denial-of-service (DDoS) assaults, 
+						faulty access control, and data breaches occur frequently. The OWASP 
+						Foundation developed the OWASP Top 10 to help avoid these security 
+						concerns.
+						</p>
+					</section>
+					<section>
+						<p>
+							OWASP’s last “Top 10” list was published in 2017, which was recently updated in Q4 of 2021. 
+						</p>
+						<img src="./OWASP-Top-10.png" alt="">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>What Are the OWASP Top 10 Vulnerabilities for 2022?</h2>
+					</section>
+					<section>
+						<img src="./OWASP-Vulnerabilities.png" alt="">
+					</section>
+				</section>
+				<section>
+					<section><h2>1. Broken access control</h2></section>
+					<section>
+						<p>
+							Access control implements strategies to prevent 
+							users from operating beyond the scope of their 
+							specified permissions. Due to access vulnerabilities, 
+							unauthenticated or unwanted users may access 
+							classified data and processes and user privilege settings.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section><h2>2. Cryptographic failures </h2></section>
+					<section>
+						<p>
+							Cryptographic failures, formerly known as 
+							sensitive data exposure, rose one spot to 
+							position two. This is more of a symptom 
+							than a primary cause; the emphasis here 
+							lies on cryptographic errors or lack thereof, 
+							which frequently expose sensitive data.
+						</p>
+					</section>
+					<section>
+						<h3>Typical examples of sensitive information exposure:</h3>
+						<p>
+							1.Session tokens <br>
+							2.Login IDs and passwords<br>
+							3.Online transactions<br>
+							4.Personal information (switched service network or SSN, health records, etc.)<br>
+						</p>
+					</section>
+					<section>
+						<p>
+							1.You should use robust, salted and adaptive hashing algorithms with a delay factor to store passwords, like scrypt, Argon2, PBKDF2 or bcrypt. <br>
+							2.Older protocols such as file transfer protocol (FTP) and simple mail transfer protocol (SMTP) should be avoided when transferring sensitive data. <br>
+							3.Instead of merely using encryption, it is advisable to implement authenticated encryption. <br>
+							4.Cryptographically random keys must be produced and stored as byte arrays. If passwords are employed, it has to be changed into something like a key using an algorithm for password-based key creation. <br>
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>
+							3. Injections
+						</h2>
+						<img src="./What is a SQL injection.jpg" alt="">
+					</section>
+					<section>
+						<p>
+							Injection (or SQL injections) is a database attack 
+							against a website that uses structured query language 
+							(SQL) to obtain information or perform activities 
+							that would ordinarily need an authenticated user 
+							account. These codes are difficult for the program 
+							to interpret from its own code, allowing attackers 
+							to conduct injection attacks to gain access to 
+							protected areas and sensitive data masquerading 
+							as trusted users. Injections include SQL injections,
+							 command injections, CRLF injections, and LDAP injections, etc.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<img src="./6256fdfb247c55a0e1072b2e_Insecure Design Preview.jpg" alt="">
+					</section>
+					<section>
+						<p>
+							Insecure design is a wide category that 
+							contains a variety of problems, such as 
+							.”missing or inadequate control design.” 
+							That does not imply that insecure design 
+							is the root of all other top 10 risk categories.
+						</p>
+					</section>
+					<section>
+						1. Set up and use a secure development lifecycle with the assistance of AppSec specialists to evaluate and build security and privacy safeguards. <br>
+						2. Threat modeling is advised for crucial verification, access control, application logic, and essential flows. <br>
+						3. Include security terminology and controls inside user stories. <br>
+						4. Tenant segregation by design across all tiers is also seen as a practical preventative approach. <br>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>5. Security misconfigurations  </h2>
+					</section>
+					<section>
+						<p>
+							General security setup issues, quite like misconfigured access controls, pose 
+							significant hazards by providing attackers with quick and easy access to critical data and site regions.
+							To avoid configuration complications, secure installation techniques must be used
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>
+							6. Vulnerable and outdated components 
+						</h2>
+					</section>
+					<section>
+						<p>
+							The majority of online apps are created with the help 
+							of third-party frameworks. Unknown application codes 
+							may result in undesirable outcomes and unwanted situations
+							 such as accent control violations, SQL injections, etc. 
+							 If the program is insecure, unsupported, or outdated, 
+							 there may be vulnerability-related hazards
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>7. Identification and authentication failures </h2>
+					</section>
+					<section>
+						<p>
+							When an attacker obtains user information, password recovery, 
+							ID sessions, and other login credentials, it poses security issues.  
+							As the name implies, an identity and authentication failure 
+							includes hackers exploiting such vulnerabilities to take advantage 
+							of inadequate authentication. 
+						</p>
+						<img src="./1_9SestvSJvrLT1caF46DaDA.png" alt="" width="400px">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>8. Software and data integrity failures</h2>
+					</section>
+					<section>
+						<p>
+							This is a new category, and it focuses on assuming the integrity 
+							of software updates, vital data, and CI/CD procedures without 
+							verifying them. One example is when applications use extensions, 
+							modules, or repositories from content delivery networks (CDNs) 
+							or unauthorized sources. A continuous integration/continuous delivery 
+							(CI/CD) process that is not protected might raise the risk of malicious 
+							code, system compromise or unauthorized access.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>9. Security logging and monitoring failures </h2>
+					</section>
+					<section>
+						<p>
+							1.Verify that all authentication, access security systems, and server-side data validation problems are recorded with sufficient user information to detect suspicious or fraudulent accounts and stored for an adequate period to a delayed comprehensive investigation. <br>
+							2.Make sure that logs are created in formats consumable by log management systems.<br>
+							3.Ensure that log data is encoded appropriately to avoid intrusions or cyber threats to the monitoring systems. <br>
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>10. Server-side request forgery (SSRF) </h2>
+					</section>
+					<section>
+						<p>
+						1. To limit the effects of SSRF, one should separate remote resource access functions into distinct networks. <br>
+						2. Install “deny by default” firewall settings or network access control rules for blocking all web traffic except for required internal traffic. <br>
+						3. To protect against attacks like DNS remapping and “time of check, time of usage,” in (TOCTOU) situations, it’s good to be conscious of URL accuracy. <br>
+						</p>
+				</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
